@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuckMath Classroom | Unblocked Games Hub</title>
-    <meta name="description" content="DuckMath Classroom provides classroom-style access to DuckMath, Slope, Geometry Dash Lite, and FNAF-inspired game hubs. Safe, fast, and Chromebook friendly.">
-
+    <title>FNAF Strategy Lab | DuckMath Classroom</title>
+    <meta name="description" content="FNAF strategy drills for DuckMath Classroom. Highlight survival planning, observation skills, and quick decision challenges.">
     <style>
         :root {
-            --primary-color: #1967d2;
+            --primary-color: #9334e6;
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
             --text-color: #3c4043;
@@ -54,7 +53,7 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             font-size: 14px;
             color: var(--muted-text);
         }
@@ -76,13 +75,11 @@
             border-radius: 16px;
             padding: 24px;
             margin-bottom: 30px;
-            display: grid;
-            gap: 16px;
         }
 
         .hero h1 {
-            margin: 0;
-            font-size: 30px;
+            margin: 0 0 10px;
+            font-size: 28px;
         }
 
         .hero p {
@@ -93,15 +90,14 @@
 
         .section-title {
             font-size: 24px;
-            margin-bottom: 20px;
-            color: #3c4043;
+            margin-bottom: 16px;
             border-bottom: 2px solid #e8eaed;
             padding-bottom: 10px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 24px;
         }
 
@@ -119,44 +115,36 @@
         }
 
         .card-header {
-            height: 110px;
+            height: 100px;
             padding: 16px;
-            color: white;
-            position: relative;
+            color: #fff;
+            background-color: var(--primary-color);
         }
 
-        .card-header.duckmath { background-color: #9334e6; }
-        .card-header.slope { background-color: #1e8e3e; }
-        .card-header.geometry { background-color: #d93025; }
-        .card-header.fnaf { background-color: #5f6368; }
-
         .card-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .card-subtitle {
             font-size: 12px;
-            margin-top: 5px;
+            margin-top: 6px;
             opacity: 0.9;
         }
 
         .card-body {
             padding: 16px;
-            min-height: 120px;
+            min-height: 110px;
             position: relative;
         }
 
         .teacher-avatar {
-            width: 60px;
-            height: 60px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             background-color: #eee;
             position: absolute;
-            top: -30px;
+            top: -26px;
             right: 16px;
             border: 3px solid #fff;
             background-size: cover;
@@ -171,7 +159,7 @@
 
         .btn-start {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 16px;
             color: var(--primary-color);
             font-weight: 600;
             text-decoration: none;
@@ -180,7 +168,7 @@
         }
 
         footer {
-            margin-top: 50px;
+            margin-top: 40px;
             padding: 40px 20px;
             background: #fff;
             border-top: 1px solid #dadce0;
@@ -197,67 +185,55 @@
             DuckMath <span>Classroom</span>
         </div>
         <div class="nav-links">
+            <a href="index.html">Home</a>
             <a href="duckmath.html">DuckMath</a>
             <a href="slope.html">Slope</a>
             <a href="geometry-dash-lite.html">Geometry Dash Lite</a>
-            <a href="fnaf.html">FNAF</a>
         </div>
     </header>
 
     <main class="container">
         <section class="hero">
-            <h1>Unblocked Games Trends · DuckMath Classroom</h1>
-            <p>DuckMath is surging in unblocked game searches. This hub organizes the top related themes—DuckMath, Slope, Geometry Dash Lite, and FNAF—into classroom-ready landing pages.</p>
+            <h1>FNAF Strategy Lab</h1>
+            <p>FNAF-related searches are rising alongside DuckMath. Use this page to highlight survival strategies, observation drills, and quick-decision challenges in a classroom-friendly format.</p>
         </section>
 
         <section>
-            <div class="section-title">Trending Theme Hubs</div>
+            <div class="section-title">Featured FNAF Sessions</div>
             <div class="grid">
                 <div class="course-card">
-                    <div class="card-header duckmath">
-                        <div class="card-title">DuckMath Hub</div>
-                        <div class="card-subtitle">Math + Logic Spotlight</div>
+                    <div class="card-header">
+                        <div class="card-title">Night Watch Planning</div>
+                        <div class="card-subtitle">Period 1 · Observation Skills</div>
                     </div>
                     <div class="card-body">
-                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=duckmath');"></div>
-                        <p class="description">Lead visitors into the trending DuckMath theme with logic labs, timing drills, and math challenges.</p>
-                        <a href="duckmath.html" class="btn-start">Open DuckMath</a>
+                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=night');"></div>
+                        <p class="description">Teach players how to track cameras, prioritize alerts, and plan resources.</p>
+                        <a href="#" class="btn-start">Start Session</a>
                     </div>
                 </div>
 
                 <div class="course-card">
-                    <div class="card-header slope">
-                        <div class="card-title">Slope Practice</div>
-                        <div class="card-subtitle">Reflex &amp; Speed Runs</div>
+                    <div class="card-header">
+                        <div class="card-title">Reaction Drill Lab</div>
+                        <div class="card-subtitle">Period 2 · Time Management</div>
                     </div>
                     <div class="card-body">
-                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=slope');"></div>
-                        <p class="description">A dedicated Slope page for fast movement training and geometry-based course planning.</p>
-                        <a href="slope.html" class="btn-start">Open Slope</a>
+                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=alert');"></div>
+                        <p class="description">Short, high-pressure tasks that pair well with DuckMath logic challenges.</p>
+                        <a href="duckmath.html" class="btn-start">Visit DuckMath</a>
                     </div>
                 </div>
 
                 <div class="course-card">
-                    <div class="card-header geometry">
-                        <div class="card-title">Geometry Dash Lite</div>
-                        <div class="card-subtitle">Timing &amp; Rhythm</div>
+                    <div class="card-header">
+                        <div class="card-title">Escape Route Review</div>
+                        <div class="card-subtitle">Period 3 · Strategy Recap</div>
                     </div>
                     <div class="card-body">
-                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=geometry');"></div>
-                        <p class="description">Highlight rhythm-based jump challenges and quick reaction drills in a classroom-friendly format.</p>
-                        <a href="geometry-dash-lite.html" class="btn-start">Open Geometry</a>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="card-header fnaf">
-                        <div class="card-title">FNAF Strategy</div>
-                        <div class="card-subtitle">Observation &amp; Planning</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=fnaf');"></div>
-                        <p class="description">Provide strategy-forward content to capture FNAF search intent while staying in the DuckMath ecosystem.</p>
-                        <a href="fnaf.html" class="btn-start">Open FNAF</a>
+                        <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=route');"></div>
+                        <p class="description">Break down patterns and rehearse responses for improved performance.</p>
+                        <a href="#" class="btn-start">Open Recap</a>
                     </div>
                 </div>
             </div>
@@ -265,8 +241,8 @@
     </main>
 
     <footer>
-        <h2>About DuckMath Classroom</h2>
-        <p>DuckMath Classroom is your trend-focused landing hub for DuckMath and related unblocked game topics. Each section includes classroom-friendly descriptions to keep the site clean, fast, and easy to navigate.</p>
+        <h2>How to Frame FNAF Content</h2>
+        <p>Keep descriptions focused on strategy, observation, and timing to match the educational tone of DuckMath Classroom while still capturing FNAF-related interest.</p>
         <p style="font-size:12px; margin-top:20px; opacity:0.6;">© 2026 DuckMath Classroom. All rights reserved.</p>
     </footer>
 </body>
