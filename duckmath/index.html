@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuckMath 主题页 | DuckMath Classroom</title>
+    <meta name="description" content="DuckMath 主题页：介绍 DuckMath 系列与热门游戏列表。">
+    <style>
+        :root {
+            --primary-color: #1967d2;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #3c4043;
+            --muted-color: #5f6368;
+        }
+
+        body {
+            font-family: "Roboto", "Noto Sans SC", Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: #fff;
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            color: var(--muted-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: #174ea6;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 20px rgba(60, 64, 67, 0.1);
+        }
+
+        .intro h1 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .intro p {
+            color: var(--muted-color);
+            line-height: 1.6;
+        }
+
+        .pill-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .pill {
+            background: #e8f0fe;
+            color: #174ea6;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .section-title {
+            margin: 28px 0 14px;
+            font-size: 20px;
+            color: #202124;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card span {
+            font-size: 12px;
+            color: #174ea6;
+            font-weight: 600;
+        }
+
+        .card a {
+            margin-top: auto;
+            color: #174ea6;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #fff;
+            border-top: 1px solid #dadce0;
+            padding: 30px 20px;
+            font-size: 13px;
+            color: var(--muted-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DuckMath <span>Classroom</span></div>
+        <a class="nav-link" href="/">返回首页</a>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h1>DuckMath 热门合集介绍</h1>
+            <p>DuckMath 系列主打“速度 + 思考”的组合玩法，将算式训练、逻辑推理和节奏闯关融合在同一套体验中。本合集收录不同版本的 DuckMath 以及玩法相近的拓展游戏，方便你按难度与场景快速选择。</p>
+            <div class="pill-group">
+                <span class="pill">速答训练</span>
+                <span class="pill">逻辑推理</span>
+                <span class="pill">课堂对战</span>
+                <span class="pill">挑战榜单</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">相关游戏列表</h2>
+            <div class="grid">
+                <div class="card">
+                    <span>核心</span>
+                    <h3>Math Duck</h3>
+                    <p>主线题库版本，包含限时答题与奖励关卡。</p>
+                    <a href="/games/math-duck">进入详情 →</a>
+                </div>
+                <div class="card">
+                    <span>升级版</span>
+                    <h3>Duck Logic Lab</h3>
+                    <p>加入多步推理与协作解题模式。</p>
+                    <a href="/games/duck-logic">进入详情 →</a>
+                </div>
+                <div class="card">
+                    <span>速度挑战</span>
+                    <h3>Duck Dash</h3>
+                    <p>结合冲刺关卡与快速计算，适合热身。</p>
+                    <a href="/games/duck-dash">进入详情 →</a>
+                </div>
+                <div class="card">
+                    <span>课堂合作</span>
+                    <h3>Team Math Relay</h3>
+                    <p>多人接力答题模式，适合分组活动。</p>
+                    <a href="/games/team-math">进入详情 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        DuckMath Classroom · DuckMath 系列持续更新
+    </footer>
+</body>
+</html>

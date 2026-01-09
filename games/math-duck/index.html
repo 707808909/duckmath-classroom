@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Duck | 游戏详情</title>
+    <meta name="description" content="Math Duck 游戏详情：玩法简介、标签与相似游戏推荐。">
+    <style>
+        :root {
+            --primary-color: #1967d2;
+            --bg-color: #f8f9fa;
+            --text-color: #3c4043;
+            --muted-color: #5f6368;
+        }
+
+        body {
+            font-family: "Roboto", "Noto Sans SC", Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: #fff;
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #174ea6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            align-items: center;
+        }
+
+        .screenshot {
+            background: linear-gradient(135deg, #e8f0fe, #ffffff);
+            border-radius: 16px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #174ea6;
+            border: 1px solid #d2e3fc;
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 18px rgba(60, 64, 67, 0.1);
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 12px 0;
+        }
+
+        .tag {
+            background: #e8f0fe;
+            color: #174ea6;
+            padding: 6px 10px;
+            border-radius: 14px;
+            font-size: 12px;
+        }
+
+        .section-title {
+            margin: 28px 0 12px;
+            font-size: 20px;
+            color: #202124;
+        }
+
+        .similar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .similar-card {
+            background: #fff;
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .similar-card a {
+            color: #174ea6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">← 返回首页</a>
+        <a href="/duckmath">DuckMath 主题页</a>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="screenshot">游戏截图 / Math Duck</div>
+            <div class="info-card">
+                <h1>Math Duck</h1>
+                <p>玩法简介：在限定时间内解出算式，解锁加成与奖励关卡。适合课堂快速热身与个人刷分。</p>
+                <div class="tags">
+                    <span class="tag">DuckMath</span>
+                    <span class="tag">速答</span>
+                    <span class="tag">数学训练</span>
+                    <span class="tag">单人</span>
+                </div>
+                <p>建议人群：喜欢短时集中训练的玩家。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">相似游戏推荐</h2>
+            <div class="similar-grid">
+                <div class="similar-card">
+                    <h3>Duck Logic Lab</h3>
+                    <p>加入逻辑推理关卡的升级版本。</p>
+                    <a href="/games/duck-logic">查看详情 →</a>
+                </div>
+                <div class="similar-card">
+                    <h3>Team Math Relay</h3>
+                    <p>多人接力答题，适合小组竞赛。</p>
+                    <a href="/games/team-math">查看详情 →</a>
+                </div>
+                <div class="similar-card">
+                    <h3>Duck Dash</h3>
+                    <p>在冲刺节奏中完成快速计算。</p>
+                    <a href="/games/duck-dash">查看详情 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

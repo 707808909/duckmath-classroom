@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趋势榜 | DuckMath Classroom</title>
+    <meta name="description" content="展示 DuckMath Classroom 的趋势游戏与最新热门推荐。">
+    <style>
+        :root {
+            --primary-color: #1967d2;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #3c4043;
+            --muted-color: #5f6368;
+        }
+
+        body {
+            font-family: "Roboto", "Noto Sans SC", Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: #fff;
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #174ea6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 18px rgba(60, 64, 67, 0.1);
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            color: var(--muted-color);
+        }
+
+        .grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #dadce0;
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .rank {
+            font-size: 12px;
+            color: #174ea6;
+            font-weight: 600;
+        }
+
+        .card a {
+            margin-top: auto;
+            color: #174ea6;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">← 返回首页</a>
+        <a href="/duckmath">DuckMath 主题页</a>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>趋势榜 · 最新热门</h1>
+            <p>根据访问热度与课堂推荐更新，快速定位最新热门游戏。</p>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <span class="rank">#1 热度飙升</span>
+                <h2>Math Duck</h2>
+                <p>速答题库 + 课堂高分榜。</p>
+                <a href="/games/math-duck">查看详情 →</a>
+            </div>
+            <div class="card">
+                <span class="rank">#2 热门合作</span>
+                <h2>Team Math Relay</h2>
+                <p>多人接力答题，课堂互动强。</p>
+                <a href="/games/team-math">查看详情 →</a>
+            </div>
+            <div class="card">
+                <span class="rank">#3 节奏挑战</span>
+                <h2>Space Waves</h2>
+                <p>节拍闯关玩法，适合集中训练。</p>
+                <a href="/games/space-waves">查看详情 →</a>
+            </div>
+            <div class="card">
+                <span class="rank">#4 益智推荐</span>
+                <h2>Slope</h2>
+                <p>高速轨道挑战，提升反应。</p>
+                <a href="/games/slope">查看详情 →</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

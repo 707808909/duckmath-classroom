@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Logic Lab | 游戏详情</title>
+    <meta name="description" content="Duck Logic Lab 游戏详情：截图、玩法简介、标签与相似游戏推荐。">
+    <style>
+        :root {
+            --primary-color: #1967d2;
+            --bg-color: #f8f9fa;
+            --text-color: #3c4043;
+            --muted-color: #5f6368;
+        }
+
+        body {
+            font-family: "Roboto", "Noto Sans SC", Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: #fff;
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #174ea6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            align-items: center;
+        }
+
+        .screenshot {
+            background: linear-gradient(135deg, #fef7e0, #ffffff);
+            border-radius: 16px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #b06000;
+            border: 1px solid #fde293;
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 18px rgba(60, 64, 67, 0.1);
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 12px 0;
+        }
+
+        .tag {
+            background: #fef7e0;
+            color: #b06000;
+            padding: 6px 10px;
+            border-radius: 14px;
+            font-size: 12px;
+        }
+
+        .section-title {
+            margin: 28px 0 12px;
+            font-size: 20px;
+            color: #202124;
+        }
+
+        .similar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .similar-card {
+            background: #fff;
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .similar-card a {
+            color: #174ea6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">← 返回首页</a>
+        <a href="/duckmath">DuckMath 主题页</a>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="screenshot">游戏截图 / Duck Logic Lab</div>
+            <div class="info-card">
+                <h1>Duck Logic Lab</h1>
+                <p>玩法简介：多步骤逻辑推理关卡，带有协作解题提示与评分机制。</p>
+                <div class="tags">
+                    <span class="tag">逻辑</span>
+                    <span class="tag">推理</span>
+                    <span class="tag">DuckMath</span>
+                    <span class="tag">小组</span>
+                </div>
+                <p>适合课堂讨论与分组演练。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">相似游戏推荐</h2>
+            <div class="similar-grid">
+                <div class="similar-card">
+                    <h3>Math Duck</h3>
+                    <p>基础题库版本，节奏更快。</p>
+                    <a href="/games/math-duck">查看详情 →</a>
+                </div>
+                <div class="similar-card">
+                    <h3>Team Math Relay</h3>
+                    <p>多人接力答题，提高协作效率。</p>
+                    <a href="/games/team-math">查看详情 →</a>
+                </div>
+                <div class="similar-card">
+                    <h3>Duck Tiles</h3>
+                    <p>策略型排列组合挑战。</p>
+                    <a href="/games/duck-tiles">查看详情 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

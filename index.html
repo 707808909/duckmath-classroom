@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 标题完美匹配你的域名和关键词 -->
-    <title>DuckMath Classroom | Unblocked Study Tools & Educational Resources</title>
-    <!-- SEO 描述：给爬虫看 Unblocked，给老师看 Study -->
-    <meta name="description" content="DuckMath Classroom provides unblocked study aids for students. Access AP Physics (Space Waves), Algebra Logic (Math Duck), and Geometry (Slope). Safe for school use on Chromebooks.">
-    
+    <title>DuckMath Classroom | DuckMath 热门合集与学习型游戏</title>
+    <meta name="description" content="DuckMath Classroom 提供热门 DuckMath 合集、数学与益智游戏、多人对战与新上架推荐。">
     <style>
-        /* 伪装风格：模仿 Google Classroom 网课系统 */
         :root {
-            --primary-color: #1967d2; /* Google Classroom Blue */
+            --primary-color: #1967d2;
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
             --text-color: #3c4043;
+            --muted-color: #5f6368;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: "Roboto", "Noto Sans SC", Arial, sans-serif;
             margin: 0;
-            padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
         }
 
-        /* 顶部导航栏 */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
         header {
             background-color: #fff;
-            padding: 15px 24px;
-            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -40,7 +44,7 @@
 
         .logo {
             font-size: 22px;
-            color: #5f6368;
+            color: var(--muted-color);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -53,267 +57,372 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             font-size: 14px;
-            color: #5f6368;
-            cursor: pointer;
+            color: var(--muted-color);
         }
 
-        /* 核心区域 */
+        .nav-links a {
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: #e8f0fe;
+            color: #174ea6;
+            font-weight: 500;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 32px auto 0;
+            padding: 0 20px 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            align-items: center;
+        }
+
+        .hero-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 20px rgba(60, 64, 67, 0.1);
+        }
+
+        .hero-title {
+            font-size: 28px;
+            margin: 0 0 10px;
+        }
+
+        .hero-subtitle {
+            color: var(--muted-color);
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 10px 18px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #e8f0fe;
+            color: #174ea6;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 65%);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid #d2e3fc;
+        }
+
+        .highlight-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .highlight-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .highlight-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e8eaed;
+        }
+
         .container {
             max-width: 1200px;
-            margin: 30px auto;
+            margin: 20px auto 60px;
             padding: 0 20px;
         }
 
         .section-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #3c4043;
-            border-bottom: 2px solid #e8eaed;
-            padding-bottom: 10px;
+            font-size: 22px;
+            margin: 32px 0 16px;
+            color: #202124;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
         }
 
-        /* 卡片样式 */
-        .course-card {
+        .card {
             background: var(--card-bg);
             border: 1px solid #dadce0;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-        }
-
-        .course-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(60,64,67,0.1);
-        }
-
-        .card-header {
-            height: 100px;
+            border-radius: 14px;
             padding: 16px;
-            color: white;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: 160px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        
-        /* 学科颜色 */
-        。card-header.physics { background-color: #9334e6; } /* Space Waves (紫) */
-        。card-header.math { background-color: #d93025; }    /* Math Duck (红) */
-        .card-header.geo { background-color: #1e8e3e; }     /* Slope (绿) */
-        .card-header.music { background-color: #ef6c00; }   /* Sprunki (橙) */
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(60, 64, 67, 0.12);
+        }
+
+        .card-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #174ea6;
+            background: #e8f0fe;
+            padding: 4px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            width: fit-content;
+        }
 
         .card-title {
-            font-size: 20px;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .card-subtitle {
-            font-size: 12px;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-
-        .card-body {
-            padding: 16px;
-            height: 80px;
-            position: relative;
-        }
-
-        。teacher-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #eee;
-            position: absolute;
-            top: -30px;
-            right: 16px;
-            border: 3px solid #fff;
-            background-size: cover;
-        }
-
-        .btn-start {
-            display: inline-block;
-            margin-top: 30px;
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        /* 游戏弹窗 */
-        #gameModal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 1000;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        iframe {
-            width: 85%;
-            height: 85%;
-            background: #000;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .close-btn {
-            color: #fff;
-            margin-bottom: 15px;
-            cursor: pointer;
             font-size: 18px;
-            background: #d93025;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: bold;
+            margin: 0;
         }
 
-        /* 底部 SEO 文案 */
+        .card-desc {
+            color: var(--muted-color);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .card-links {
+            margin-top: auto;
+            font-size: 13px;
+            color: #174ea6;
+            font-weight: 600;
+        }
+
         footer {
-            margin-top: 50px;
-            padding: 40px 20px;
+            padding: 32px 20px 48px;
             background: #fff;
             border-top: 1px solid #dadce0;
-            font-size: 14px;
-            color: #5f6368;
-            line-height: 1.6;
+            color: var(--muted-color);
+            font-size: 13px;
         }
-        
-        h2 { font-size: 18px; color: #202124; margin-top: 20px;}
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .footer-grid h3 {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #202124;
+        }
     </style>
 </head>
 <body>
-
-    <!-- 头部导航 -->
     <header>
         <div class="logo">
             <svg style="width:24px;height:24px;margin-right:10px" viewBox="0 0 24 24"><path fill="#5f6368" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
             DuckMath <span>Classroom</span>
         </div>
-        <div class="nav-links">
-            <span>Classes</span>
-            <span>Calendar</span>
-            <span>To-do</span>
-        </div>
+        <nav class="nav-links">
+            <a href="#popular">热门</a>
+            <a href="#math">数学</a>
+            <a href="#action">动作</a>
+            <a href="#puzzle">益智</a>
+            <a href="#multiplayer">多人</a>
+            <a href="#new">新上架</a>
+        </nav>
     </header>
 
-    <!-- 主要内容 -->
-    <div class="container">
-        <div class="section-title">Spring 2026 Curriculum</div>
-        
-        <div class="grid">
-            
-            <!-- 1. Space Waves (已替换为直接可用链接) -->
-            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/864879339/embed')">
-                <div class="card-header physics">
-                    <div class="card-title">AP Physics (Waves)</div>
-                    <div class="card-subtitle">Period 1 - Dr. Wave</div>
-                </div>
-                <div class="card-body">
-                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=wave');"></div>
-                    <div class="description">Study of orbital trajectories and momentum.</div>
-                    <a href="#" class="btn-start">Start Lab</a>
-                </div>
+    <section class="hero">
+        <div class="hero-card">
+            <h1 class="hero-title">DuckMath 热门合集</h1>
+            <p class="hero-subtitle">精选 DuckMath 系列与课堂同款数学游戏，覆盖逻辑、反应、空间与协作四大维度，让你快速找到最想玩的版本。</p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="/duckmath">进入 DuckMath 主题页</a>
+                <a class="btn-secondary" href="/trending">查看趋势榜</a>
             </div>
-
-            <!-- 2. Math Duck (已替换为直接可用链接) -->
-            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/637686981/embed')">
-                <div class="card-header math">
-                    <div class="card-title">Algebra I (Logic)</div>
-                    <div class="card-subtitle">Period 2 - Prof. Quack</div>
-                </div>
-                <div class="card-body">
-                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=duck');"></div>
-                    <div class="description">Equation solving with time constraints.</div>
-                    <a href="#" class="btn-start">Start Quiz</a>
-                </div>
-            </div>
-
-            <!-- 3. Slope (已替换为直接可用链接) -->
-            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/412439906/embed')">
-                <div class="card-header geo">
-                    <div class="card-title">Spatial Geometry</div>
-                    <div class="card-subtitle">Period 3 - Mr. Slope</div>
-                </div>
-                <div class="card-body">
-                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=slope');"></div>
-                    <div class="description">3D coordinate system navigation analysis.</div>
-                    <a href="#" class="btn-start">Start Practice</a>
-                </div>
-            </div>
-
-            <!-- 4. Sprunki Incredibox (已替换为直接可用链接) -->
-            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/1055008953/embed')">
-                <div class="card-header music">
-                    <div class="card-title">Music Theory 101</div>
-                    <div class="card-subtitle">Period 4 - Mr. Sprunki</div>
-                </div>
-                <div class="card-body">
-                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=sprunki');"></div>
-                    <div class="description">Rhythm composition and harmony analysis.</div>
-                    <a href="#" class="btn-start">Resume Assignment</a>
-                </div>
-            </div>
-
         </div>
-    </div>
+        <div class="hero-highlight">
+            <div class="highlight-title">本周精选合集</div>
+            <div class="highlight-list">
+                <div class="highlight-item">
+                    <div>
+                        <strong>Math Duck</strong><br>
+                        <span class="card-desc">高分题库 + 快速答题</span>
+                    </div>
+                    <a class="card-links" href="/games/math-duck">详情</a>
+                </div>
+                <div class="highlight-item">
+                    <div>
+                        <strong>Space Waves</strong><br>
+                        <span class="card-desc">节奏闯关 + 波动掌控</span>
+                    </div>
+                    <a class="card-links" href="/games/space-waves">详情</a>
+                </div>
+                <div class="highlight-item">
+                    <div>
+                        <strong>Slope</strong><br>
+                        <span class="card-desc">反应极限 + 视觉速度</span>
+                    </div>
+                    <a class="card-links" href="/games/slope">详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- 底部 SEO -->
+    <main class="container">
+        <section id="popular">
+            <h2 class="section-title">热门游戏</h2>
+            <div class="grid">
+                <a class="card" href="/games/math-duck">
+                    <span class="card-tag">DuckMath</span>
+                    <h3 class="card-title">Math Duck</h3>
+                    <p class="card-desc">高频题型速刷，适合课堂练习与赛前热身。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+                <a class="card" href="/games/space-waves">
+                    <span class="card-tag">动作</span>
+                    <h3 class="card-title">Space Waves</h3>
+                    <p class="card-desc">跟随节奏穿越波浪障碍，考验专注与节拍感。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+                <a class="card" href="/games/slope">
+                    <span class="card-tag">益智</span>
+                    <h3 class="card-title">Slope</h3>
+                    <p class="card-desc">高速球道挑战，提升反应与路径预判。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="math">
+            <h2 class="section-title">数学专区</h2>
+            <div class="grid">
+                <a class="card" href="/games/math-duck">
+                    <span class="card-tag">题库</span>
+                    <h3 class="card-title">Math Duck 题目训练</h3>
+                    <p class="card-desc">覆盖方程、算式、速答三种模式。</p>
+                    <span class="card-links">立即练习 →</span>
+                </a>
+                <a class="card" href="/games/duck-logic">
+                    <span class="card-tag">逻辑</span>
+                    <h3 class="card-title">Duck Logic Lab</h3>
+                    <p class="card-desc">多步骤解题，适合小组演练。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="action">
+            <h2 class="section-title">动作挑战</h2>
+            <div class="grid">
+                <a class="card" href="/games/space-waves">
+                    <span class="card-tag">节奏</span>
+                    <h3 class="card-title">Space Waves</h3>
+                    <p class="card-desc">跟随音乐闯关，升级节拍掌控力。</p>
+                    <span class="card-links">立即开玩 →</span>
+                </a>
+                <a class="card" href="/games/duck-dash">
+                    <span class="card-tag">反应</span>
+                    <h3 class="card-title">Duck Dash</h3>
+                    <p class="card-desc">冲刺路线随机生成，考验敏捷反应。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="puzzle">
+            <h2 class="section-title">益智精选</h2>
+            <div class="grid">
+                <a class="card" href="/games/slope">
+                    <span class="card-tag">空间</span>
+                    <h3 class="card-title">Slope</h3>
+                    <p class="card-desc">掌控角度与速度，解锁更高阶路线。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+                <a class="card" href="/games/duck-tiles">
+                    <span class="card-tag">策略</span>
+                    <h3 class="card-title">Duck Tiles</h3>
+                    <p class="card-desc">排列组合挑战，适合轻量休闲。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="multiplayer">
+            <h2 class="section-title">多人合作</h2>
+            <div class="grid">
+                <a class="card" href="/games/duck-arena">
+                    <span class="card-tag">对战</span>
+                    <h3 class="card-title">Duck Arena</h3>
+                    <p class="card-desc">双人对战模式，适合课堂分组挑战。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+                <a class="card" href="/games/team-math">
+                    <span class="card-tag">协作</span>
+                    <h3 class="card-title">Team Math Relay</h3>
+                    <p class="card-desc">多人接力答题，强化协作意识。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="new">
+            <h2 class="section-title">新上架</h2>
+            <div class="grid">
+                <a class="card" href="/games/duck-logic">
+                    <span class="card-tag">新品</span>
+                    <h3 class="card-title">Duck Logic Lab</h3>
+                    <p class="card-desc">全新关卡与解题路径，适合挑战班级榜单。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+                <a class="card" href="/games/duck-dash">
+                    <span class="card-tag">新品</span>
+                    <h3 class="card-title">Duck Dash</h3>
+                    <p class="card-desc">速度与精准双重考验，新人也能快速上手。</p>
+                    <span class="card-links">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <h2>About DuckMath Classroom</h2>
-        <p>DuckMath Classroom is a premier online learning management system designed to help students master various subjects including Geometry, Music Theory, and Logic. Our platform offers a variety of educational resources that are accessible from school devices.</p>
-        
-        <h2>How to Access Class Materials</h2>
-        <p>If you are looking for unblocked study aids, you are in the right place. Our "Music Theory" module features the latest rhythm exercises (often searched as Sprunki Mod unblocked). Our "Geometry" section includes reflex training tools (similar to Slope unblocked). All resources are optimized for Chromebooks and require no downloads.</p>
-        
-        <h2>FAQ</h2>
-        <p><strong>Is DuckMath Classroom free?</strong> Yes, all educational games and unblocked tools are free to use.<br>
-        <strong>Can I use this at school?</strong> Absolutely, this site is designed as an educational hub.</p>
-        
-        <p style="font-size:12px; margin-top:20px; opacity:0.6;">© 2026 DuckMath Classroom. All rights reserved.</p>
+        <div class="footer-grid">
+            <div>
+                <h3>DuckMath Classroom</h3>
+                <p>聚焦热门 DuckMath 合集、数学挑战与多人游戏，打造课堂友好型游戏中心。</p>
+            </div>
+            <div>
+                <h3>快速入口</h3>
+                <p><a href="/duckmath">DuckMath 主题页</a></p>
+                <p><a href="/trending">趋势榜单</a></p>
+            </div>
+            <div>
+                <h3>更多推荐</h3>
+                <p>探索更多版本与玩法，持续更新新上架游戏。</p>
+            </div>
+        </div>
     </footer>
-
-    <!-- 全屏弹窗逻辑 -->
-    <div id="gameModal">
-        <div class="close-btn" onclick="closeGame()">End Class (Esc)</div>
-        <iframe id="gameFrame" src="" allowfullscreen></iframe>
-    </div>
-
-    <script>
-        function playGame(url) {
-            document.getElementById('gameFrame').src = url; 
-            document.getElementById('gameModal').style.display = 'flex';
-        }
-
-        function closeGame() {
-            document.getElementById('gameFrame').src = ''; // 关闭时停止声音
-            document.getElementById('gameModal').style.display = 'none';
-        }
-
-        // 按 ESC 键关闭
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeGame();
-            }
-        });
-    </script>
-
 </body>
 </html>
