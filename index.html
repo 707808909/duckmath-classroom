@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 标题完美匹配你的域名和关键词 -->
-    <title>DuckMath Classroom | Unblocked Study Tools & Educational Resources</title>
+    <!-- SEO 标题：看起来像教育网站，但包含核心词 -->
+    <title>DuckMath Classroom | Educational Study Tools & Geometry Resources</title>
     <!-- SEO 描述：给爬虫看 Unblocked，给老师看 Study -->
-    <meta name="description" content="DuckMath Classroom provides unblocked study aids for students. Access AP Physics (Space Waves), Algebra Logic (Math Duck), and Geometry (Slope). Safe for school use on Chromebooks.">
-    <meta name="description" content="DuckMath Classroom is classroom-ready, no-install math practice that loads fast on school devices. Built for quick access, focus, and unblocked learning.">
+    <meta name="description" content="DuckMath Classroom provides essential study tools for students. Access geometry practice, music theory labs, and logic puzzles. Safe, secure, and unblocked for school use.">
     
     <style>
-        /* 伪装风格：模仿 Google Classroom 网课系统 */
+        /* 伪装风格：模仿网课系统 */
         :root {
             --primary-color: #1967d2; /* Google Classroom Blue */
             --bg-color: #f8f9fa;
@@ -26,14 +25,30 @@
             color: var(--text-color);
         }
 
-        /* 顶部导航栏 */
+        /* 顶部导航栏 - 看起来像学习后台 */
         header {
             background-color: #fff;
             padding: 15px 24px;
             box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
             display: flex;
             align-items: center;
-@@ -52,50 +52,130 @@
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            color: #5f6368;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+            font-weight: bold;
         }
 
         .nav-links {
@@ -41,10 +56,9 @@
             gap: 20px;
             font-size: 14px;
             color: #5f6368;
-            cursor: pointer;
         }
 
-        /* 核心区域 */
+        /* 核心区域：课程网格 (其实是游戏) */
         .container {
             max-width: 1200px;
             margin: 30px auto;
@@ -59,93 +73,13 @@
             padding-bottom: 10px;
         }
 
-        .hero {
-            background: #fff;
-            border: 1px solid #dadce0;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 28px;
-            box-shadow: 0 1px 2px rgba(60,64,67,0.08);
-        }
-
-        .hero h1 {
-            font-size: 28px;
-            margin: 0 0 12px;
-            color: #202124;
-        }
-
-        .hero p {
-            margin: 0 0 16px;
-            color: #5f6368;
-            font-size: 15px;
-        }
-
-        .hero-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px 18px;
-            padding-left: 18px;
-            margin: 0;
-            color: #3c4043;
-            font-size: 14px;
-        }
-
-        .copy-grid,
-        .persona-grid,
-        .metric-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 16px;
-        }
-
-        .copy-card,
-        .persona-card,
-        .metric-card {
-            background: #fff;
-            border: 1px solid #dadce0;
-            border-radius: 10px;
-            padding: 16px;
-        }
-
-        .copy-card h3,
-        .persona-card h3,
-        .metric-card h3 {
-            margin: 0 0 8px;
-            font-size: 16px;
-            color: #202124;
-        }
-
-        .copy-card p,
-        .persona-card p,
-        .metric-card p,
-        .copy-card ul,
-        .metric-card ul {
-            margin: 0;
-            font-size: 13px;
-            color: #5f6368;
-            line-height: 1.5;
-        }
-
-        .copy-card ul,
-        .metric-card ul {
-            padding-left: 18px;
-            margin-top: 8px;
-        }
-
-        .section-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            margin-bottom: 28px;
-        }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 24px;
         }
 
-        /* 卡片样式 */
+        /* 伪装卡片设计 */
         .course-card {
             background: var(--card-bg);
             border: 1px solid #dadce0;
@@ -162,15 +96,105 @@
 
         .card-header {
             height: 100px;
+            background-color: var(--primary-color);
             padding: 16px;
             color: white;
-@@ -194,51 +274,136 @@
+            position: relative;
+        }
+        
+        /* 给不同学科配不同颜色 */
+        .card-header.music { background-color: #ef6c00; } /* Orange */
+        .card-header.geo { background-color: #1e8e3e; } /* Green */
+        .card-header.math { background-color: #d93025; } /* Red */
+        .card-header.physics { background-color: #9334e6; } /* Purple */
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-subtitle {
+            font-size: 12px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .card-body {
+            padding: 16px;
+            height: 80px;
+            position: relative;
+        }
+
+        .teacher-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #eee;
+            position: absolute;
+            top: -30px;
+            right: 16px;
+            border: 3px solid #fff;
+            background-size: cover;
+        }
+
+        .btn-start {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* 游戏弹窗 (点击后全屏玩) */
+        #gameModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 80%;
+            height: 80%;
+            background: #000;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .close-btn {
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            background: #d93025;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+        /* 底部 SEO 区域 (给谷歌看的) */
+        footer {
+            margin-top: 50px;
+            padding: 40px 20px;
+            background: #fff;
+            border-top: 1px solid #dadce0;
             font-size: 14px;
             color: #5f6368;
             line-height: 1.6;
         }
         
-        h2 { font-size: 18px; color: #202124; margin-top: 20px;}
+        h2 { font-size: 18px; color: #202124; }
     </style>
 </head>
 <body>
@@ -178,6 +202,7 @@
     <!-- 头部导航 -->
     <header>
         <div class="logo">
+            <!-- 汉堡菜单图标 (装饰) -->
             <svg style="width:24px;height:24px;margin-right:10px" viewBox="0 0 24 24"><path fill="#5f6368" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
             DuckMath <span>Classroom</span>
         </div>
@@ -188,116 +213,113 @@
         </div>
     </header>
 
-    <!-- 主要内容 -->
+    <!-- 主要内容区 -->
     <div class="container">
-        <div class="hero">
-            <h1>课堂可用的免安装数学练习平台</h1>
-            <p>DuckMath Classroom 让数学练习在学校设备上快速打开、稳定运行、无需下载。</p>
-            <ul class="hero-list">
-                <li>免安装：打开即用，适配 Chromebooks 与课堂场景。</li>
-                <li>快速加载：低延迟进入练习，减少等待与分心。</li>
-                <li>数学学习：聚焦代数、几何与逻辑训练，便于课堂安排。</li>
-            </ul>
-        </div>
-
-        <div class="section-title">Spring 2026 Curriculum</div>
-
-        <div class="section-stack">
-            <div>
-                <div class="section-title">3 套文案组合</div>
-                <div class="copy-grid">
-                    <div class="copy-card">
-                        <h3>组合 A</h3>
-                        <p><strong>短 slogan：</strong>课堂就绪，数学即开即学</p>
-                        <p><strong>页面 H1：</strong>课堂可用的免安装数学练习平台</p>
-                        <p><strong>Meta description：</strong>DuckMath Classroom 提供免安装、快速加载的数学练习，适配课堂设备与学习节奏。</p>
-                    </div>
-                    <div class="copy-card">
-                        <h3>组合 B</h3>
-                        <p><strong>短 slogan：</strong>快一点进练习，专注数学</p>
-                        <p><strong>页面 H1：</strong>快速加载的课堂数学练习中心</p>
-                        <p><strong>Meta description：</strong>让学生在学校设备上快速进入代数与几何练习，无需下载。</p>
-                    </div>
-                    <div class="copy-card">
-                        <h3>组合 C</h3>
-                        <p><strong>短 slogan：</strong>免安装也能高效学数学</p>
-                        <p><strong>页面 H1：</strong>免安装、可课堂使用的数学学习入口</p>
-                        <p><strong>Meta description：</strong>DuckMath Classroom 专为课堂场景打造，加载快、好访问、专注数学学习。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="section-title">核心画像价值主张</div>
-                <div class="persona-grid">
-                    <div class="persona-card">
-                        <h3>教师版</h3>
-                        <p>课堂一键打开、无需安装，便于快速组织练习与分层教学。</p>
-                    </div>
-                    <div class="persona-card">
-                        <h3>学生版</h3>
-                        <p>加载快、操作简单，直接进入数学练习不被设备限制。</p>
-                    </div>
-                    <div class="persona-card">
-                        <h3>家长版</h3>
-                        <p>不用下载与注册，孩子随时进入数学练习，学习路径清晰。</p>
-                    </div>
-                    <div class="persona-card">
-                        <h3>Unblocked 玩家版</h3>
-                        <p>在学校设备上可访问、进入快，练习与挑战都不被阻挡。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="section-title">A/B 测试指标</div>
-                <div class="metric-grid">
-                    <div class="metric-card">
-                        <h3>点击率（CTR）</h3>
-                        <p>衡量不同主价值主张与 CTA 的吸引力。</p>
-                        <ul>
-                            <li>目标：提升点击进入课程卡片的比例。</li>
-                        </ul>
-                    </div>
-                    <div class="metric-card">
-                        <h3>停留时长</h3>
-                        <p>衡量用户对页面与练习内容的兴趣。</p>
-                        <ul>
-                            <li>目标：提升平均停留时间与课程浏览深度。</li>
-                        </ul>
-                    </div>
-                    <div class="metric-card">
-                        <h3>跳出率</h3>
-                        <p>衡量信息是否匹配用户预期。</p>
-                        <ul>
-                            <li>目标：降低首屏退出比例。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="section-title">Enrolled Courses (Semester 1)</div>
         
         <div class="grid">
             
-            <!-- 1. Space Waves (已替换为直接可用链接) -->
-            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/864879339/embed')">
-                <div class="card-header physics">
-                    <div class="card-title">AP Physics (Waves)</div>
-                    <div class="card-subtitle">Period 1 - Dr. Wave</div>
+            <!-- 游戏 1: Sprunki (伪装成 Music Theory) -->
+            <!-- 这里填入你从 TurboWarp 转出来的 HTML 链接 -->
+            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/1055008953/embed')">
+                <div class="card-header music">
+                    <div class="card-title">Music Theory 101</div>
+                    <div class="card-subtitle">Period 3 - Mr. Sprunki</div>
                 </div>
                 <div class="card-body">
-                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=wave');"></div>
-                    <div class="description">Study of orbital trajectories and momentum.</div>
+                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=sprunki');"></div>
+                    <div class="description">Interactive rhythm composition and harmony analysis.</div>
+                    <a href="#" class="btn-start">Resume Assignment</a>
+                </div>
+            </div>
+
+            <!-- 游戏 2: Geometry Dash (伪装成 Geometry) -->
+            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/1055008953/embed')">
+                <div class="card-header geo">
+                    <div class="card-title">Advanced Geometry</div>
+                    <div class="card-subtitle">Period 4 - Ms. Dash</div>
+                </div>
+                <div class="card-body">
+                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=geo');"></div>
+                    <div class="description">Spatial reasoning and obstacle avoidance vectors.</div>
+                    <a href="#" class="btn-start">Start Practice</a>
+                </div>
+            </div>
+
+            <!-- 游戏 3: Math Duck (必须放的真正游戏) -->
+            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/1055008953/embed')">
+                <div class="card-header math">
+                    <div class="card-title">Algebraic Logic</div>
+                    <div class="card-subtitle">Period 1 - Prof. Duck</div>
+                </div>
+                <div class="card-body">
+                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=duck');"></div>
+                    <div class="description">Solve equations to unlock the key and open the door.</div>
+                    <a href="#" class="btn-start">Start Quiz</a>
+                </div>
+            </div>
+
+            <!-- 游戏 4: Space Waves (伪装成 Physics) -->
+            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/1055008953/embed')">
+                <div class="card-header physics">
+                    <div class="card-title">Applied Physics</div>
+                    <div class="card-subtitle">Period 5 - Dr. Wave</div>
+                </div>
+                <div class="card-body">
+                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=space');"></div>
+                    <div class="description">Wave motion and momentum trajectory analysis.</div>
                     <a href="#" class="btn-start">Start Lab</a>
                 </div>
             </div>
 
-            <!-- 2. Math Duck (已替换为直接可用链接) -->
-            <div class="course-card" onclick="playGame('https://scratch.mit.edu/projects/637686981/embed')">
-                <div class="card-header math">
-                    <div class="card-title">Algebra I (Logic)</div>
-                    <div class="card-subtitle">Period 2 - Prof. Quack</div>
-                </div>
-                <div class="card-body">
-                    <div class="teacher-avatar" style="background-image: url('https://api.dicebear.com/7.x/bottts/svg?seed=duck');"></div>
-                    <div class="description">Equation solving with time constraints.</div>
+        </div>
+    </div>
+
+    <!-- 底部 SEO 堆砌区 -->
+    <footer>
+        <h2>About DuckMath Classroom</h2>
+        <p>DuckMath Classroom is a premier online learning management system designed to help students master various subjects including Geometry, Music Theory, and Logic. Our platform offers a variety of educational resources that are accessible from school devices.</p>
+        
+        <h2>How to Access Class Materials</h2>
+        <p>If you are looking for unblocked study aids, you are in the right place. Our "Music Theory" module features the latest rhythm exercises (often searched as Sprunki Mod unblocked). Our "Geometry" section includes reflex training tools (similar to Geometry Dash unblocked). All resources are optimized for Chromebooks and require no downloads.</p>
+        
+        <h2>FAQ</h2>
+        <p><strong>Is DuckMath Classroom free?</strong> Yes, all educational games and unblocked tools are free to use.<br>
+        <strong>Can I use this at school?</strong> Absolutely, this site is designed as an educational hub.</p>
+        
+        <p style="font-size:12px; margin-top:20px; opacity:0.6;">© 2026 DuckMath Classroom. All rights reserved. Not affiliated with Google Classroom.</p>
+    </footer>
+
+    <!-- 游戏全屏弹窗代码 -->
+    <div id="gameModal">
+        <div class="close-btn" onclick="closeGame()">Close Lesson (Esc)</div>
+        <iframe id="gameFrame" src="" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // 游戏控制逻辑
+        function playGame(url) {
+            var modal = document.getElementById('gameModal');
+            var frame = document.getElementById('gameFrame');
+            // 注意：以后要把这里的链接换成你自己服务器上的 HTML 文件链接
+            frame.src = url; 
+            modal.style.display = 'flex';
+        }
+
+        function closeGame() {
+            var modal = document.getElementById('gameModal');
+            var frame = document.getElementById('gameFrame');
+            frame.src = ''; // 关闭时停止游戏声音
+            modal.style.display = 'none';
+        }
+
+        // 按 ESC 键也能关闭
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeGame();
+            }
+        });
+    </script>
+
+</body>
+</html>
